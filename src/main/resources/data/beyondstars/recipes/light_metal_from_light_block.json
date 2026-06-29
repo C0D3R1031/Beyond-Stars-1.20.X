@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "beyondstars:light_metal_block"
+    }
+  ],
+  "result": {
+    "item": "beyondstars:light_metal",
+    "count": 9
+  }
+}

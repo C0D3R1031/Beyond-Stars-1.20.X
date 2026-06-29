@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+     "item": "beyondstars:light_metal"
+      }
+    },
+"result": {
+"item": "beyondstars:light_metal_block"
+  }
+}
