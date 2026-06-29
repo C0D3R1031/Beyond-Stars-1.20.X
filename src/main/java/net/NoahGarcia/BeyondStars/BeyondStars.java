@@ -1,6 +1,9 @@
 package net.NoahGarcia.BeyondStars;
 
 import com.mojang.logging.LogUtils;
+import net.NoahGarcia.BeyondStars.Item.ModCreativeModeTabs;
+import net.NoahGarcia.BeyondStars.Item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -24,6 +27,12 @@ public class BeyondStars {
     public BeyondStars(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
+        // everything being loaded in for the mod by eventbus
+        ModCreativeModeTabs.register(modEventBus);
+        ModItems.register(modEventBus);
+
+
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -36,6 +45,10 @@ public class BeyondStars {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.STARLIGHT_ALLOY);
+            event.accept(ModItems.LIGHT_METAL);
+        }
 
     }
 
