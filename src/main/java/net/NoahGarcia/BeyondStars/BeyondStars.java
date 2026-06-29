@@ -3,6 +3,7 @@ package net.NoahGarcia.BeyondStars;
 import com.mojang.logging.LogUtils;
 import net.NoahGarcia.BeyondStars.Item.ModCreativeModeTabs;
 import net.NoahGarcia.BeyondStars.Item.ModItems;
+import net.NoahGarcia.BeyondStars.block.ModBlocks;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,6 +31,7 @@ public class BeyondStars {
         // everything being loaded in for the mod by eventbus
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
 

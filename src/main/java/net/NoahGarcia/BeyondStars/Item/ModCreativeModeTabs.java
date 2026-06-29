@@ -1,6 +1,7 @@
 package net.NoahGarcia.BeyondStars.Item;
 
 import net.NoahGarcia.BeyondStars.BeyondStars;
+import net.NoahGarcia.BeyondStars.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -17,9 +18,15 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() ->new ItemStack(ModItems.LIGHT_METAL.get()))
             .title(Component.translatable("creativetab.beyond_stars"))
                     .displayItems((pParameters, pOutput) -> {
+
+                        //Items
                         pOutput.accept((ModItems.STARLIGHT_ALLOY.get()));
                         pOutput.accept((ModItems.LIGHT_METAL.get()));
+
+                        //Blocks
+                        pOutput.accept(ModBlocks.LIGHT_METAL_BLOCK.get());
                     })
+
             .build());
 
 

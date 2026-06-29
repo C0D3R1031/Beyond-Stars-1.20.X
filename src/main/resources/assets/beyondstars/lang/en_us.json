@@ -2,5 +2,7 @@
   "item.beyondstars.starlight_alloy": "Starlight Alloy",
   "item.beyondstars.light_metal": "Light Metal",
 
+  "block.beyondstars.light_metal_block": "Block of Light Metal",
+
   "creativetab.beyond_stars": "Beyond Star's Resources Tab"
 }
